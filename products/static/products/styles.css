@@ -1,0 +1,76 @@
+/* Importing Montserrat Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Using Montserrat font */
+    background-color: #eef2f3; /* Lighter background color */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600; /* Bold weight for h1 */
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #2980b9; /* Darker shade on hover */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px; /* Slightly larger border radius */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow for depth */
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 20px; /* Increased padding */
+    border-radius: 6px; /* More rounded corners */
+    cursor: pointer;
+    font-size: 16px; /* Larger font size */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px; /* Increased padding for inputs */
+    margin: 5px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px; /* Larger font size for inputs */
+    transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+    border-color: #3498db; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}

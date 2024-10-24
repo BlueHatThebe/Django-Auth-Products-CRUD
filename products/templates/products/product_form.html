@@ -1,0 +1,27 @@
+{% extends 'products/base.html' %}
+{% block title %}Add/Edit Product{% endblock %}
+
+{% block content %}
+<h1>{% if form.instance.pk %}Edit{% else %}Add{% endif %} Product</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+<a href="{% url 'product_list' %}">Cancel</a>
+{% endblock %}
+
+
+<h1>Product List</h1>
+<a href="{% url 'product_create' %}">Add Product</a>
+<ul>
+    {% for product in products %}
+        <li>
+            {{ product.name }} - {{ product.price }}
+            <a href="{% url 'product_update' product.pk %}">Edit</a>
+            <a href="{% url 'product_delete' product.pk %}">Delete</a>
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'logout' %}">Logout</a>
+
